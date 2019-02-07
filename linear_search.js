@@ -5,7 +5,7 @@ let encontrarValor = 22		// valor selecionado para reconhecer posicao
 
 for(i = 0; i <= colecaoDeValores.length; i++) {		// percorre a colecao buscando encontrar o valor selecionado
 	if(colecaoDeValores[i] == encontrarValor) console.log('O Valor ' + encontrarValor + ' esta na posicao ' + i + ' da colecao')	// indica a posicao do valor no console
-}
+} 
 
 
 //-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
