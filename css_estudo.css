@@ -1,0 +1,16 @@
+/* melhor que margin: auto para centralizar*/
+
+.perfect-center {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+/* media query "if do css" */
+@media( /*condicional faca*/ min-width: 1200px) {
+    /* .class {
+        alteracao
+    }*/
+}
