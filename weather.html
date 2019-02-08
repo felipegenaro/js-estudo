@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<head>
+	<title>API Request</title>
+</head>
+<body>
+	<p id="aqi">Onde tu ta: </p>
+	<p id="cqt">Como ta o ar: </p>
+	<p id="qsig">QUE SIGINIFICA: </p>
+</body>
+
+
+<script>
+
+	$.getJSON( "https://api.waqi.info/feed/here/?token=9618831b634035f7761dde5f90311d91ff1fbfce", function( result ) {
+		console.log(result);
+		aqi = result.data.aqi;
+		idx = result.data.idx;
+		city = result.data.city.name;
+		station = result.data.attributions[0].name;
+		co = result.data.iaqi.co;
+		h = result.data.iaqi.h;
+		no2 = result.data.iaqi.no2;
+		p = result.data.iaqi.p;
+		pm10 = result.data.iaqi.pm10;
+		pm25 = result.data.iaqi.pm25;
+		so2 = result.data.iaqi.so2;
+		t = result.data.iaqi.t;
+		w = result.data.iaqi.w;
+		
+		$("#aqi").append(city);
+		$("#cqt").append(aqi);
+
+		if (aqi <= 50)
+		{
+			$("#qsig").append("SAFE");
+		}
+		else if (aqi <= 100)
+		{
+			$("#qsig").append("MODERADAO");
+		}
+		else if (aqi <= 150)
+		{
+			$("#qsig").append("MAL A SAUDE DE QUEM JA TA BIXADO");
+		}
+		else if (aqi <= 200)
+		{
+			$("#qsig").append("RUIM PARA A SAUDE");
+		}
+		else if (aqi <= 300)
+		{
+			$("#qsig").append("MUITO RUIM PARA SAUDE");
+		}
+		else
+		{
+			$("#qsig").append("HAZARD / DEAD / CHAMA O BOMBEIRO");
+		}
+	});
+
+</script>
+
+</html>
