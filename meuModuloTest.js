@@ -1,5 +1,5 @@
 exports.nomeFuncao = function(parametros) {
-	console.log('o parametro passado foi: ' + parametros)
+	console.log(`o parametro passado foi: ${parametros}`)
 };
 
 exports.outraFuncao = function() {

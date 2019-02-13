@@ -4,7 +4,7 @@ let colecaoDeValores = [24,50,45,18,96,72,59,51,97,98,21,22,92,87,53,35,76,53,37
 let encontrarValor = 22;		// valor selecionado para reconhecer posicao
 
 for(i = 0; i <= colecaoDeValores.length; i++) {		// percorre a colecao buscando encontrar o valor selecionado
-	if(colecaoDeValores[i] == encontrarValor) console.log('O Valor ' + encontrarValor + ' esta na posicao ' + i + ' da colecao');	// indica a posicao do valor no console
+	if(colecaoDeValores[i] == encontrarValor) console.log(`O Valor ${encontrarValor} esta na posicao ${i} da colecao`);	// indica a posicao do valor no console
 } 
 
 
@@ -12,7 +12,7 @@ for(i = 0; i <= colecaoDeValores.length; i++) {		// percorre a colecao buscando 
 
 // Busca Linear Dinamica, com interacao com o usuario
 
-function main() {
+const main = function() {
 	let inputLength = prompt('Insira o tamanho da colecao:');	// define o tamanho da colecao
 	if(checkValue(inputLength)) return;
 	let arrayConsulta = new Array(inputLength);	// cria colecao com o tamanho inserido
@@ -24,13 +24,13 @@ function main() {
 	let maxValue = (arrayConsulta.length) - 1;
 	arrayConsulta.sort(function(a,b){ return (Math.round(Math.random())-0.5); });	// desordena a colecao
 
-	let inputSearch = prompt('Qual valor deseja buscar ?? Insira um valor entre: 0 e ' + maxValue + ' (Valores são ordenados randomicamente)');	// inserir o valor que se deseja saber a posicao
+	let inputSearch = prompt(`Qual valor deseja buscar ?? Insira um valor entre: 0 e ${maxValue} (Valores são ordenados randomicamente)`);	// inserir o valor que se deseja saber a posicao
 	if(checkColecao(arrayConsulta, inputSearch)) return;
 
 	if(parseInt(inputSearch) <= parseInt(inputLength)) {
 		for(i = 0; i <= arrayConsulta.length; i++) {
 			if(arrayConsulta[i] == inputSearch) {		// verifica se o valor requisitado esta na posicao
-				alert('O valor esta na posicao: ' + (i+1) + ' da colecao. Confira a colecao completa: [' + arrayConsulta + ' ]');		// aponta a posicao do numero requisitado
+				alert(`O valor esta na posicao: ${(i+1)} da colecao. Confira a colecao completa: [${arrayConsulta}]`);		// aponta a posicao do numero requisitado
 				break;
 			} 
 		}
@@ -39,7 +39,7 @@ function main() {
 	}
 }
 
-function checkValue(value) {		// verifica se o caracter inserido e um numeral
+const checkValue = function(value) {		// verifica se o caracter inserido e um numeral
 	let numberRule = /^[0-9]+$/;
 
 	if(!value.match(numberRule)) {
@@ -48,7 +48,7 @@ function checkValue(value) {		// verifica se o caracter inserido e um numeral
 	}
 }
 
-function checkColecao(colection, value) {		// checka se o valor inserido pertence a colecao
+const checkColecao = function(colection, value) {		// checka se o valor inserido pertence a colecao
 	if(!colection.indexOf(parseInt(value))) {
 		alert('Valor nao permetido');
 		return true;
