@@ -1,0 +1,22 @@
+console REPL (read eval print loop)
+
+null == 0 
+False
+
+null > 0
+False
+
+null < 0
+False
+
+
+Null <= 0
+True
+(O mesmo que)
+!(null > 0)
+
+O mesmo vale
+
+Null >= 0
+True
+!(null < 0)
