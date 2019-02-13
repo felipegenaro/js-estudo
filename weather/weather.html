@@ -6,6 +6,7 @@
 </head>
 <body>
 	<p id="aqi">Satelite Utilizado na Consulta: </p>
+	<p id="aqit">Temperatura no Momento: </p>
 	<p id="cqt">Nivel de Poluentes no Ar: </p>
 	<p id="qsig">Status: </p>
 
@@ -15,8 +16,8 @@
 <script>
 	fetch(`https://api.waqi.info/feed/here/?token=9618831b634035f7761dde5f90311d91ff1fbfce`)
 	.then(data => data.json())
-	.then(data => {
-		data = data.data;
+	.then(intel => {
+		data = intel.data;
 		console.log(data);
 		aqi = data.aqi;
 		idx = data.idx;
@@ -30,6 +31,7 @@
 		pm25 = data.iaqi.pm25;
 		so2 = data.iaqi.so2;
 		t = data.iaqi.t;
+		// t = data.iaqi.t.v;
 		w = data.iaqi.w;
 		// });
 	// $.getJSON( "https://api.waqi.info/feed/here/?token=9618831b634035f7761dde5f90311d91ff1fbfce", function( result ) {
@@ -48,8 +50,12 @@
 	// 	t = result.data.iaqi.t;
 	// 	w = result.data.iaqi.w;
 	
-		document.querySelector('#aqi').append(city);
-		document.querySelector('#cqt').append(aqi);
+		const selector = selector => document.querySelector(selector);
+
+		// document.querySelector('#aqi').append(city);
+		selector('#aqi').append(city);
+		selector('#aqit').append(t+'°');
+		selector('#cqt').append(aqi);
 
 		// $("#aqi").append(city);
 		// $("#cqt").append(aqi);
@@ -57,32 +63,32 @@
 		if (aqi <= 50)
 		{
 			// $("#qsig").append("SAFE");
-			document.querySelector('#qsig').append('SAFE');
+			selector('#qsig').append('SAFE');
 		}
 		else if (aqi <= 100)
 		{
 			// $("#qsig").append("MODERADAO");
-			document.querySelector('#qsig').append('MODERADAO');
+			selector('#qsig').append('MODERADAO');
 		}
 		else if (aqi <= 150)
 		{
 			// $("#qsig").append("MAL A SAUDE DE QUEM JA TA BIXADO");
-			document.querySelector('#qsig').append('MAL A SAUDE DE QUEM JA TA BIXADO');
+			selector('#qsig').append('MAL A SAUDE DE QUEM JA TA BIXADO');
 		}
 		else if (aqi <= 200)
 		{
 			// $("#qsig").append("RUIM PARA A SAUDE");
-			document.querySelector('#qsig').append('RUIM PARA A SAUDE');
+			selector('#qsig').append('RUIM PARA A SAUDE');
 		}
 		else if (aqi <= 300)
 		{
 			// $("#qsig").append("MUITO RUIM PARA SAUDE");
-			document.querySelector('#qsig').append('MUITO RUIM PARA SAUDE');
+			selector('#qsig').append('MUITO RUIM PARA SAUDE');
 		}
 		else
 		{
 			// $("#qsig").append("HAZARD / DEAD / CHAMA O BOMBEIRO");
-			document.querySelector('#qsig').append('HAZARD / DEAD / CHAMA O BOMBEIRO');
+			selector('#qsig').append('HAZARD / DEAD / CHAMA O BOMBEIRO');
 		}
 	});
 </script>
