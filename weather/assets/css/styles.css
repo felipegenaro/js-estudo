@@ -1,0 +1,25 @@
+body {
+    display: flex;
+    font-family: sans-serif;
+    margin: 0px;
+}
+
+.grid {
+    display: grid;
+    grid-column: repeat(5, 20%);
+    grid-row: repeat(4, 25%);
+    grid-template: 
+    "header header header header header"
+    "main main main main main"
+    "main main main main main"
+    "footer footer footer footer footer";
+}
+
+header {
+    background-color: rgb(29, 89, 166);
+    grid-area: header;
+}
+
+header p {
+    color: whitesmoke;
+}
