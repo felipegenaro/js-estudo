@@ -4,9 +4,9 @@ const mongoose = restful.mongoose;
 
 // Schema
 const someSchema = new mongoose.Schema({
-    nome: String,
-    descricao: String,
-    valor: Number
+    name: String,
+    description: String,
+    value: Number
 });
 
 // Return model

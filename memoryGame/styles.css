@@ -8,7 +8,7 @@ main {
     justify-content: center;
 }
 
-.cabecalho {
+.hearderContainer {
     margin: 12px;
     text-align: center;
 }
@@ -23,7 +23,7 @@ main {
     transition: 500ms;
 }
 
-.corpo {
+.mainContainer {
     border: solid 5px;
     border-radius: 2.5%;
     display: flex;
@@ -69,7 +69,7 @@ img {
     width: 100px;
 }
 
-.certo {
+.findSuccess {
     border: dashed red 1px;
     opacity: 0.85;
     transition: 350ms;

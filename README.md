@@ -1,7 +1,3 @@
-# web_estudo
+## Some HTML, CSS and JS Snippets
 
-arquivos de estudo sobre HTML CSS JS e afins.
-
-atividades, desafios e tutoriais realizados.
-
-.
+### All of than were created in january 2019
