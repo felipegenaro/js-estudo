@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>RPG</title>
+	<link defer rel="stylesheet" type="text/css" href="css/main.css">
+	<link defer rel="stylesheet" type="text/css" href="css/flexbox/flexbox.css">
+	<link defer rel="stylesheet" type="text/css" href="css/bootstrap.css">
+</head>
+<body>
+	<div class="row">
+		<div class="col-md-12">
+			<div class="btn-group">
+				<select class="form-control" id="dice">
+				<option>Pick a Dice</option>
+				<option value="4">D4</option>
+				<option value="6">D6</option>
+				<option value="8">D8</option>
+				<option value="10">D10</option>
+				<option value="12">D12</option>
+				<option value="20">D20</option>
+				</select>
+			</div>
+			<div class="btn-group">
+				<button class="btn btn-info" type="button" onclick="roll(dice)">Roll</button>
+			</div>
+			<div class="btn-group">
+				<label id="response"></label>
+			</div>
+			<br>
+			<br>
+			<div class="row">
+				<div class="col-md-12">
+					<div class="div-border col-sm-2 col-md-2 col-lg-2">
+						<p class="top-footer-margin" align="center">
+							Something
+						</p>
+						<div class="div-radio col-sm-offset-9 col-md-offset-9 col-lg-offset-10">
+							<!-- use an square img -->
+							<img src="http://gowrealtips.co/wp-content/uploads/2014/12/SpearofFire_Gear.png">
+						</div>
+						<div class="row">
+						<div class="top-footer-margin col-sm-12 col-md-12 col-lg-12">
+						<div class="col-sm-3 col-md-3 col-lg-3">
+							<div class="div-little-radio div-border">
+								<!-- use an square img -->
+								<img src="https://cdn3.iconfinder.com/data/icons/search-icon-set-glyphs-version/120/probability-512.png">
+							</div>
+						</div>
+						<div class="col-sm-3 col-md-3 col-lg-3"></div>
+						<div class="col-sm-3 col-md-3 col-lg-3">
+							<div class="div-little-radio">
+								<!-- use an square img -->
+								<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAMAAAAM7l6QAAAARVBMVEX///8AAAANDQ1kZGQuLi76+vqurq6ZmZm3t7f19fXd3d2EhIRaWlrr6+vX19ceHh5wcHBERESwsLCoqKgzMzPMzMxVVVWUV/r8AAAA8klEQVQokYWT2wKDIAxDm4J4RVG2/f+nDpxoq9vMmxwsJQ1ERW00lgG2JrZ0lg8JFXHwmtYJTsGN3o8uTGlDLWA1AHY5vp0FhmqnM9BXJPf3wFxWBnBz7qVhDNu5QKE1Hl3hwHq+Z/Tln3lby+rBuf8Au58r/qbKIiQ3GO7iwqoF3FLE9J0STYhkconvCjBkRW2TDDUHdrDEGI+FqPAIJkDY/1TYAxp3F6yKd5fisrUTzq2pi2mcL6Zs0Tjbkkw9gpDGNIvayVQ5kteatG0on5GogUptA5VxEGr20f8P010UP0EW7iwqyHTzDOjuEdGPJ/gGutsICbl9QR4AAAAASUVORK5CYII=">
+							</div>
+						</div>
+						</div>
+						</div>
+					</div>
+					<div class="col-sm-8 col-md-8 col-lg-8"></div>
+					<div class="div-border col-sm-2 col-md-2 col-lg-2">
+						<br>
+						<div class="div-radio" style="margin-left: -65px;">
+							<!-- use an square img -->
+							<img src="https://yt3.ggpht.com/-SGaHqWhwy94/AAAAAAAAAAI/AAAAAAAAAAA/cD872-Bqc3o/s100-c-k-no-mo-rj-c0xffffff/photo.jpg">
+						</div>
+						<br>
+					</div>
+				</div>
+			</div>
+			<br>
+			<br>
+			<div class="row">
+				<div class="col-md-12">
+					<div class=" col-md-1 col-sm-1 btn-group-vertical">
+						<button type="button" class="btn btn-default"><label id="str"></label></button>		
+						<button type="button" class="btn btn-default"><label id="cons"></label></button>		
+						<button type="button" class="btn btn-default"><label id="dex"></label></button>		
+						<button type="button" class="btn btn-default"><label id="agi"></label></button>		
+						<button type="button" class="btn btn-default"><label id="int"></label></button>		
+						<button type="button" class="btn btn-default"><label id="car"></label></button>		
+						<button type="button" class="btn btn-default"><label>...</label></button>		
+					</div>
+					<div class="col-md-9 col-sm-9"></div>
+					<div class="div-border col-md-2 col-sm-2">
+						<br>
+						<div class="div-radio" style="margin-left: -65px;">
+							<!-- use an square img -->
+							<img src="https://upload.wikimedia.org/wikipedia/en/e/ed/Nyan_cat_250px_frame.PNG">
+						</div>
+						<br>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<br>
+	<div class="flex layer-1">
+		<div class="no-flex side-div div-border layer-2">
+			<p class="top-footer-margin" align="center">
+				Another thing
+			</p>
+			<div class="flex just-space-between align-center">
+				<div style="margin-left: 10px">
+					<p>some paragraph</p>
+					<p align="center"> 15694</p>
+				</div>
+				<div class="div-radio layer-3" style="position: absolute; left: 145px;">
+					<!-- use an square img -->
+					<img src="./assets/test.png">
+				</div>
+			</div>
+
+			<div class="top-footer-margin">
+			<div class="flex row just-space-evenly">
+				<div class="div-little-radio div-border">
+					<!-- use an square img -->
+					<img src="./assets/dice.png">
+				</div>
+				<div class="div-little-radio div-border">
+					<!-- use an square img -->
+					<img src="./assets/info.png">
+				</div>
+			</div>
+			</div>
+		</div>
+
+		<div class="flex layer-1 mid-div"></div>
+
+		<div class="no-flex side-div div-border layer-2">
+			<p class="top-footer-margin" align="center">
+				Some other thinkg
+			</p>
+			<div class="flex just-space-between align-center row-rev">
+				<div style="margin-right: 10px">
+					<p>arroi alo</p>
+					<p align="center"> 15893</p>
+				</div>
+				<div class="div-radio layer-3" style="position: absolute; right: 145px;">
+					<!-- use an square img -->
+					<img src="./assets/teste.png">
+				</div>
+			</div>
+
+			<div class="top-footer-margin">
+			<div class="flex row just-space-evenly">
+				<div class="div-little-radio div-border">
+					<!-- use an square img -->
+					<img src="./assets/dice.png">
+				</div>
+				<div class="div-little-radio div-border">
+					<!-- use an square img -->
+					<img src="./assets/info.png">
+				</div>
+			</div>
+			</div>
+		</div>
+	</div>
+
+	<script defer type="text/javascript" src="js/jquery/dist/jquery.js"></script>
+	<script defer type="text/javascript" src="js/bootstrap.js"></script>
+	<script defer type="text/javascript" src="js/functions.js"></script>
+</body>
+</html>

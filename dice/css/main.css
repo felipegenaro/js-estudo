@@ -1,0 +1,50 @@
+.div-radio {
+	border-radius: 100%;
+	border: 2px solid #000;
+	overflow: hidden;
+	width: 100px;
+	height: 100px;
+	background: #fff;
+}
+
+.div-little-radio {
+	border-radius: 100%;
+	overflow: hidden;
+	width: 30px;
+	height: 30px;
+	background: #fff;
+	float: left;
+}
+
+.div-border {
+	border: 1.5px solid #000;
+}
+
+.mid-div {
+	width: 60%;
+}
+
+.side-div {
+	width: 20%;
+}
+
+.top-footer-margin {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.layer-1 {
+	z-index: 1;
+}
+
+.layer-2 {
+	z-index: 2;
+}
+
+.layer-3 {
+	z-index: 3;
+}
+
+img {
+	width: 100%;
+}
