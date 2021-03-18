@@ -1,3 +1,5 @@
+// early 2019
+
 let stair = Number(prompt("Say the size of the ladder: "));
 
 while(isNaN(stair)) {

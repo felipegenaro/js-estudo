@@ -1,56 +1,60 @@
-// Busca Linear Estatica
+// late 2018
 
-let colecaoDeValores = [24,50,45,18,96,72,59,51,97,98,21,22,92,87,53,35,76,53,37,69];	// colecao com 20 valores aleatorios
-let encontrarValor = 22;		// valor selecionado para reconhecer posicao
+// Static Linear Search
 
-for(i = 0; i <= colecaoDeValores.length; i++) {		// percorre a colecao buscando encontrar o valor selecionado
-	if(colecaoDeValores[i] == encontrarValor) console.log(`O Valor ${encontrarValor} esta na posicao ${i} da colecao`);	// indica a posicao do valor no console
+let collectionOfValues = [24,50,45,18,96,72,59,51,97,98,21,22,92,87,53,35,76,53,37,69];	// collection with 20 random values
+let valueToFind = 22;		// value to be find the position
+
+for(i = 0; i <= collectionOfValues.length; i++) {		// loop through the collection
+	if(collectionOfValues[i] == valueToFind) console.log(`The value ${valueToFind} is in the position ${i} of the collection`);	// indicates de position of the value in the collection
 } 
 
 
-//-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//---------------------------------------------------------------------------------------------------------------------------------
 
-// Busca Linear Dinamica, com interacao com o usuario
 
-const main = function() {
-	let inputLength = prompt('Insira o tamanho da colecao:');	// define o tamanho da colecao
+// Dinamic Linear Search
+
+const main = () => {
+	let inputLength = prompt('Input the length of the collection:');	// define o tamanho da colecao
 	if(checkValue(inputLength)) return;
-	let arrayConsulta = new Array(inputLength);	// cria colecao com o tamanho inserido
+	let searchArray = new Array(inputLength);	// creates the collection 
 
 	for(j=0;j<=inputLength;j++) {
-		arrayConsulta[j] = j;	// preenche a lista com valores de 0 ate o valor do tamanho indicado anteriormente
+		searchArray[j] = j;	// fill the collection with values from 0 to the length
 	}
 
-	let maxValue = (arrayConsulta.length) - 1;
-	arrayConsulta.sort(function(a,b){ return (Math.round(Math.random())-0.5); });	// desordena a colecao
+	let maxValue = (searchArray.length) - 1;
+	searchArray.sort(function(a,b){ return (Math.round(Math.random())-0.5); });	// shuffle the collection
 
-	let inputSearch = prompt(`Qual valor deseja buscar ?? Insira um valor entre: 0 e ${maxValue} (Valores são ordenados randomicamente)`);	// inserir o valor que se deseja saber a posicao
-	if(checkColecao(arrayConsulta, inputSearch)) return;
+	let inputSearch = prompt(`What value do you want to search for ?? Enter a value between: 0 and ${maxValue} (Values are sorted randomly)`);	// input the value to find the position
+
+	if(checkCollection(searchArray, inputSearch)) return;
 
 	if(parseInt(inputSearch) <= parseInt(inputLength)) {
-		for(i = 0; i <= arrayConsulta.length; i++) {
-			if(arrayConsulta[i] == inputSearch) {		// verifica se o valor requisitado esta na posicao
-				alert(`O valor esta na posicao: ${(i+1)} da colecao. Confira a colecao completa: [${arrayConsulta}]`);		// aponta a posicao do numero requisitado
+		for(i = 0; i <= searchArray.length; i++) {
+			if(searchArray[i] == inputSearch) {		// check if the requested value is in the collection
+				alert(`The value is in the position: ${(i+1)} of the collection. Check out the complete collection: [${searchArray}]`);		// show the position of the requested value
 				break;
 			} 
 		}
 	} else {
-		alert('Este valor nao pertence a esta colecao');		// caso o numeral informado nao faca parte da colecao
+		alert('This value does not belong to this collection');		// in case of the number does not belong the collection
 	}
 }
 
-const checkValue = function(value) {		// verifica se o caracter inserido e um numeral
+const checkValue = (value) => {		// verify if is a number
 	let numberRule = /^[0-9]+$/;
 
 	if(!value.match(numberRule)) {
-		alert('Valor nao permetido');
+		alert('Value not allowed');
 		return true;
 	}
 }
 
-const checkColecao = function(colection, value) {		// checka se o valor inserido pertence a colecao
+const checkCollection = (colection, value) => {		// check if the value belong the collection
 	if(!colection.indexOf(parseInt(value))) {
-		alert('Valor nao permetido');
+		alert('Value not allowed');
 		return true;
 	}
 }

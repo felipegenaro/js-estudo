@@ -1,3 +1,5 @@
+// late 2018
+
 exports.customFunctionName = (someParameter) => {
 	console.log(`the parameter has been: ${someParameter}`)
 };
@@ -5,7 +7,6 @@ exports.customFunctionName = (someParameter) => {
 exports.anotherCustomFunction = () => {
 	console.log("this function does nothing")
 };
-
 
 // ----------------------------------------------------------------
 

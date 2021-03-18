@@ -1,3 +1,5 @@
+// late 2018
+
 let value = 5; // more than 5K the processing gets larger than 500ms
 
 Array.apply(null, Array(value)).forEach(alert); // gives you 5 alerts

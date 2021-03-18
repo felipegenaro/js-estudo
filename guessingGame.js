@@ -1,3 +1,5 @@
+// early 2019
+
 const randomPick = randomPick => Math.floor(Math.random() * 51);
 let value = randomPick();
 let inputValue = prompt('A random value was generated between 0 and 50, try to guess what it is (you have 5 attempts): ');
